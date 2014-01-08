@@ -19,13 +19,21 @@ def fibonacci_recursive (n, high_number = 1, low_number = 0, counter = 0)
   fibonacci_recursive(n, new_high_number, new_low_number, counter)
 end
 
-p fibonacci_iterative(5) == 5
-p fibonacci_iterative(8) == 21
-p fibonacci_iterative(0) == 0
-p fibonacci_iterative(1) == 1
+def assert
+  start = Time.now
+  yield
+  done = Time.now
+  p "Took " + ((done - start) * 1000) .to_s + " microseconds seconds to complete"
+end
+assert { fibonacci_iterative(5) }
+assert { fibonacci_iterative(8) }
+assert { fibonacci_iterative(0) }
+assert { fibonacci_iterative(1) }
+assert { fibonacci_iterative(1000) }
 
 
-p fibonacci_recursive(5) == 5
-p fibonacci_recursive(8) == 21
-p fibonacci_recursive(0) == 0
-p fibonacci_recursive(1) == 1
+assert { fibonacci_recursive(5) }
+assert { fibonacci_recursive(8) }
+assert { fibonacci_recursive(0) }
+assert { fibonacci_recursive(1) }
+assert { fibonacci_recursive(1000) }
