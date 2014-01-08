@@ -32,9 +32,22 @@ def fib_iterative(n)
 	end
 end
 
+###pseudo code
+#until place is equal to n
+#make the fib sequence
+#once it hits n, print fib number
+
 
 
 def fibonacci_recursive(n)
+	if n == 0
+		0
+	elsif n == 1
+		1
+	else
+		fibonacci_recursive(n -1) + fibonacci_recursive(n - 2)
+	end 
+
 end
 
 
@@ -44,3 +57,11 @@ puts fib_iterative(2) == 1
 puts fib_iterative(3) == 2
 puts fib_iterative(4) == 3
 puts fib_iterative(5) == 5
+
+
+p fibonacci_recursive(0) == 0
+p fibonacci_recursive(1) == 1
+p fibonacci_recursive(2) == 1
+p fibonacci_recursive(3) == 2
+p fibonacci_recursive(4) == 3
+p fibonacci_recursive(5) == 5
