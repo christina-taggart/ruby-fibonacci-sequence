@@ -12,7 +12,7 @@ def fibonacci_iterative(number)
 end
 
 def fibonacci_recursive(number, previous = 0, current = 1)
-  number > 0 ? fibonacci_recursive(number-1, current, current + previous) : current
+  number > 0 ? fibonacci_recursive(number-1, current, current + previous) : previous
 end
 
 
