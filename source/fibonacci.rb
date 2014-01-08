@@ -13,19 +13,23 @@ def fibonacci_iterative(n)
 end
 
 def fibonacci_recursive(n)
-
+  if n <= 1
+    n
+  else
+    fibonacci_recursive(n-1)+fibonacci_recursive(n-2)
+  end
 end
 
 
 
 
 
-# p fibonacci_iterative(0)==0
-# p fibonacci_iterative(1)==1
-# p fibonacci_iterative(2)==1
-# p fibonacci_iterative(6)!=2739
-# p fibonacci_iterative(4)==3
-# p fibonacci_iterative(10)==55
+p fibonacci_iterative(0)==0
+p fibonacci_iterative(1)==1
+p fibonacci_iterative(2)==1
+p fibonacci_iterative(6)!=2739
+p fibonacci_iterative(4)==3
+p fibonacci_iterative(10)==55
 
 p fibonacci_recursive(0)==0
 p fibonacci_recursive(1)==1
