@@ -22,5 +22,15 @@ p fibonacci_iterative(0)
   #   #[0,1,1,2,3,5]
 
 def fibonacci_recursive(n)
-
+  fib_seq = []
+  if n == 0
+    fib_seq[n] = 0
+  elsif n==1
+   fib_seq[n] = 1
+  else
+   fibonacci_recursive(n-1) + fibonacci_recursive(n-2)
+  end
 end
+
+p fibonacci_recursive(5)
+p fibonacci_recursive(4)
